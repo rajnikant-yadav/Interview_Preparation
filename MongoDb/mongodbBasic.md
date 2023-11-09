@@ -1,0 +1,125 @@
+# NoSQL Databases
+
+## Definition:
+
+NoSQL databases are a category of database systems designed to handle and store unstructured or semi-structured data. "NoSQL" stands for "not only SQL."
+
+## Why use it?
+
+NoSQL databases are used when dealing with data without a fixed structure, providing flexibility for large amounts of data and users.
+
+## Key Characteristics:
+
+- **Schema-less or Schema-flexible:** NoSQL databases often do not require a fixed schema, allowing for flexibility in data representation.
+- **Horizontal Scalability:** Designed to scale horizontally by adding more servers or nodes to handle increased load.
+
+## MongoDB Key Features:
+
+### Document-Oriented:
+
+MongoDB stores data in flexible, JSON-like documents, suitable for representing real-world entities.
+
+### JSON-Like Documents:
+
+Data in MongoDB is stored in BSON (Binary JSON) format, which aligns well with the structure of many programming languages.
+
+### Dynamic Schema:
+
+MongoDB employs a dynamic schema, allowing documents in the same collection to have different fields, providing adaptability.
+
+### Scalability:
+
+Designed to scale horizontally by sharding data across multiple servers or nodes.
+
+### Indexing:
+
+Supports the creation of indexes on fields to improve query performance.
+
+### Aggregation Framework:
+
+Provides a powerful Aggregation Framework for data transformation and analysis within the database itself.
+
+### Geospatial Indexing:
+
+Built-in support for geospatial indexing, making it suitable for location-based applications.
+
+### Sharding:
+
+Database architecture technique for horizontally partitioning data to improve performance and scalability.
+
+## Sharding:
+
+### Data Distribution:
+
+Involves dividing data into smaller chunks called shards based on a chosen shard key.
+
+### Shard Key:
+
+Field or set of fields determining how data is distributed among shards.
+
+### Shard Servers (Nodes):
+
+Each shard is stored on a separate server, forming a sharded cluster.
+
+### Query Routing:
+
+Uses the shard key to determine which shard(s) need to be involved in fulfilling a query.
+
+### Balancing the Load:
+
+Distributes workload to prevent any single server from becoming a bottleneck.
+
+### Scalability:
+
+Provides a scalable solution by adding more shards and servers as data and user load increase.
+
+## Indexing in MongoDB:
+
+### Single Field Index:
+This is the most basic type of index and involves creating an index on a single field. It helps speed up queries that involve filtering or sorting based on that specific field.
+
+db.collection.createIndex({ fieldName: 1 });
+Here, 1 indicates an ascending index, and -1 would be for a descending index.
+
+### Compound Index:
+A compound index involves creating an index on multiple fields. This is useful when queries involve more than one field in the filter or sort conditions.
+
+db.collection.createIndex({ field1: 1, field2: -1 });
+This index can be beneficial for queries that filter or sort based on both field1 and field2.
+
+
+### Text Index:
+Text indexes are specifically designed for text search queries. They are used to perform full-text searches on string content within the collection.
+
+db.collection.createIndex({ textField: "text" });
+
+
+### Geospatial Index:
+Geospatial indexes support queries that involve geographical data. This type of index is used when dealing with location-based queries like finding nearby points.
+
+db.collection.createIndex({ locationField: "2dsphere" });
+
+### Wildcard Index:
+Wildcard indexes support queries with wildcard characters. These indexes can be used for pattern matching queries.
+
+db.collection.createIndex({ textField: "text" });
+
+### Hashed Index:
+Hashed indexes are suitable for equality queries on fields. They are used when you want to distribute data uniformly across the collection.
+
+db.collection.createIndex({ hashedField: "hashed" });
+Hashed indexes are efficient for equality queries but not suitable for range queries.
+
+### Unique Index:
+A unique index ensures that no two documents in the collection have the same values for the indexed field or fields.
+
+db.collection.createIndex({ uniqueField: 1 }, { unique: true });
+In this example, unique: true enforces uniqueness on the uniqueField.
+
+### TTL (Time-To-Live) Index:
+A TTL index automatically deletes documents from a collection after a certain period. This is useful for expiring data, such as session documents.
+
+db.collection.createIndex({ createdAt: 1 }, { expireAfterSeconds: 3600 });
+In this example, documents will be automatically deleted after one hour (3600 seconds) based on the createdAt field.
+
+These are some of the key types of indexes in MongoDB. Choosing the appropriate index type depends on the nature of your queries and the data in your collection. It's often beneficial to carefully plan and analyze query patterns to create indexes that optimize performance.
