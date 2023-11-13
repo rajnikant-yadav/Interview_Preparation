@@ -16,7 +16,16 @@ console.log("End");
 ## Asynchronous Operation:
 In asynchronous programming, tasks can be started, and the program can continue to execute other tasks without waiting for the completion of the asynchronous operation.
 Callbacks, Promises, and async/await are common mechanisms for handling asynchronous operations in JavaScript.
+```javascript
+console.log("Start");
 
+// Asynchronous operation (does not block, continues execution)
+someFunctionAsync((result) => {
+  console.log(result);
+});
+
+console.log("End");
+```
 
 
 
