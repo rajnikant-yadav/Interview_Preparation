@@ -11,7 +11,7 @@ console.log("Start");
 const result = someFunctionSync();
 console.log(result);
 
-console.log("End");
+console.log("End");```
 
 ## Asynchronous Operation:
 In asynchronous programming, tasks can be started, and the program can continue to execute other tasks without waiting for the completion of the asynchronous operation.
