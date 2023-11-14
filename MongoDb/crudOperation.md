@@ -1,5 +1,4 @@
 ## Creating a Database
-#### There are two main ways to create a database in MongoDB:
 **Using the use command:** The use command is the simplest way to create a database. It will automatically create the database if it does not already exist. For example, to create a database called myDatabase, we would use the following<br> 
 
 ```sql
