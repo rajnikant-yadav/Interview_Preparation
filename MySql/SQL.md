@@ -7,7 +7,7 @@ CREATE DATABASE YourDatabaseName;
 ```
 <br>
 
-### -- Create a new table in the database
+#### Create a new table in the database
 ```sql
 CREATE TABLE my_table (
   id INT NOT NULL AUTO_INCREMENT,
@@ -18,37 +18,37 @@ CREATE TABLE my_table (
 ```
 <br>
 
-#### -- Insert a new row into the table
+#### Insert a new row into the table
 ```sql
 INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
 ```
 <br>
 
-#### -- Update a row in the table
+#### Update a row in the table
 ```sql
 UPDATE my_table SET name = 'Jane Doe' WHERE id = 1;
 ```
 
-#### -- Delete a row from the table
+#### Delete a row from the table
 ```sql
 DELETE FROM my_table WHERE id = 2;
 ```
 <br>
 
-#### -- Query the table for all rows where the name is equal to 'John Doe'
+#### Query the table for all rows where the name is equal to 'John Doe'
 ```sql
 SELECT * FROM my_table WHERE name = 'John Doe';
 ```
 <br>
 
-#### -- Create a view that shows the name and email address of all customers who have placed an order in the last month
+#### Create a view that shows the name and email address of all customers who have placed an order in the last month
 ```sql
 CREATE VIEW recent_customers AS
 SELECT name, email FROM customers WHERE order_date >= CURRENT_DATE - INTERVAL 1 MONTH;
 ```
 <br>
 
-#### -- Grant permission to a user to select data from the recent_customers view
+#### Grant permission to a user to select data from the recent_customers view
 ```sql
 GRANT SELECT ON recent_customers TO user1;
 ```
