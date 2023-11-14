@@ -1,73 +1,53 @@
 # NoSQL Databases
-
 ## Definition:
-
-NoSQL databases are a category of database systems designed to handle and store unstructured or semi-structured data. "NoSQL" stands for "not only SQL."
+NoSQL databases are a category of database systems designed to handle and store unstructured or semi-structured data. "NoSQL" stands for "not only SQL."<b>
 
 ## Why use it?
-
-NoSQL databases are used when dealing with data without a fixed structure, providing flexibility for large amounts of data and users.
+NoSQL databases are used when dealing with data without a fixed structure, providing flexibility for large amounts of data and users.<b>
 
 ## Key Characteristics:
-
-- **Schema-less or Schema-flexible:** NoSQL databases often do not require a fixed schema, allowing for flexibility in data representation.
-- **Horizontal Scalability:** Designed to scale horizontally by adding more servers or nodes to handle increased load.
+- **Schema-less or Schema-flexible:** NoSQL databases often do not require a fixed schema, allowing for flexibility in data representation.<b>
+- **Horizontal Scalability:** Designed to scale horizontally by adding more servers or nodes to handle increased load.<b>
 
 ## MongoDB Key Features:
-
-### Document-Oriented:
-
-MongoDB stores data in flexible, JSON-like documents, suitable for representing real-world entities.
-
-### JSON-Like Documents:
-
-Data in MongoDB is stored in BSON (Binary JSON) format, which aligns well with the structure of many programming languages.
-
-### Dynamic Schema:
-
-MongoDB employs a dynamic schema, allowing documents in the same collection to have different fields, providing adaptability.
-
-### Scalability:
-
-Designed to scale horizontally by sharding data across multiple servers or nodes.
-
-### Indexing:
-
-Supports the creation of indexes on fields to improve query performance.
-
-### Aggregation Framework:
-
-Provides a powerful Aggregation Framework for data transformation and analysis within the database itself.
-
-### Geospatial Indexing:
-
-Built-in support for geospatial indexing, making it suitable for location-based applications.
-
-### Sharding:
-
-Sharding in MongoDB is a technique used for horizontal scaling, distributing data across multiple servers (shards) to improve performance and handle large amounts of data. Let's break down how sharding works in MongoDB:
+#### Document-Oriented:
+MongoDB stores data in flexible, JSON-like documents, suitable for representing real-world entities.<b>
+#### JSON-Like Documents:
+Data in MongoDB is stored in BSON (Binary JSON) format, which aligns well with the structure of many programming languages.<b>
+#### Dynamic Schema:
+MongoDB employs a dynamic schema, allowing documents in the same collection to have different fields, providing adaptability.<b>
+#### Scalability:
+Designed to scale horizontally by sharding data across multiple servers or nodes.<b>
+#### Indexing:
+Supports the creation of indexes on fields to improve query performance.<b>
+#### Aggregation Framework:
+Provides a powerful Aggregation Framework for data transformation and analysis within the database itself.<b>
+#### Geospatial Indexing:
+Built-in support for geospatial indexing, making it suitable for location-based applications.<b>
+#### Sharding:
+Sharding in MongoDB is a technique used for horizontal scaling, distributing data across multiple servers (shards) to improve performance and handle large amounts of data. Let's break down how sharding works in MongoDB:<b>
 
 ## Key Concepts of Sharding:
+#### Data Distribution:
+In sharding, data is divided into smaller chunks called shards. Each shard represents a subset of the overall data. This division is typically done based on a shard key, which is a chosen attribute of the data.<b>
 
-### Data Distribution:
-In sharding, data is divided into smaller chunks called shards. Each shard represents a subset of the overall data. This division is typically done based on a shard key, which is a chosen attribute of the data.
-
-### Shard Key:
+#### Shard Key:
 The shard key is a field or a combination of fields chosen to determine how data is distributed across shards. It's crucial to choose a shard key that evenly distributes data and aligns with your application's query patterns.
-Shard Server (Node):
+Shard Server (Node):<b>
 
-### Shard Servers (Nodes):
-Each shard is a separate MongoDB server or node. These shard servers collectively form a sharded cluster. Shards are responsible for storing a portion of the data.
+#### Shard Servers (Nodes):
+Each shard is a separate MongoDB server or node. These shard servers collectively form a sharded cluster. Shards are responsible for storing a portion of the data.<b>
 #### Sharded Collection:
-A sharded collection is a MongoDB collection that is split across multiple shards. Each shard is responsible for a subset of the collection's data.
+A sharded collection is a MongoDB collection that is split across multiple shards. Each shard is responsible for a subset of the collection's data.<b>
 
-#### Sharding Process:
+## Sharding Process:
 #### Enable Sharding for a Database:
-To enable sharding for a database, you use the shardCollection command. This command tells MongoDB which collection to shard and on which key.
+To enable sharding for a database, you use the shardCollection command. This command tells MongoDB which collection to shard and on which key.<b>
 
+```mongodb
 sh.shardCollection("mydb.mycollection", { shardKey: 1 });
 Determine Shard Key:
-
+```
 Choosing an appropriate shard key is critical. It influences how data is distributed across shards. It's often chosen based on query patterns and data distribution characteristics.
 Data Distribution:
 
