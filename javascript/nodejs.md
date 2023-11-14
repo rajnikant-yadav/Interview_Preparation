@@ -38,3 +38,27 @@ server.listen(3000, '127.0.0.1', () => {
   console.log('Server running at http://127.0.0.1:3000/');
 });
 ```
+## Thread
+In computing, a thread refers to the smallest unit of execution within a process. A thread is a sequence of instructions that can be scheduled and executed independently by a computer's operating system. Multiple threads within a single process share the same resources, such as memory space, but they run independently.
+
+## Here are some key points about threads:
+### Lightweight:
+Threads are lightweight compared to processes, as they share the same memory space and resources. This makes context switching between threads less expensive than switching between processes.
+
+### Independent execution:
+Threads can run independently within a process, meaning they can execute instructions simultaneously. However, they may need to synchronize access to shared resources to avoid conflicts.
+
+### Preemption:
+Threads can be preempted by the operating system scheduler, allowing other threads to run. This ensures that all threads have a fair share of CPU time and prevents any single thread from monopolizing the CPU.
+
+### Communication:
+Threads can communicate with each other using various mechanisms, such as shared variables, message passing, and inter-thread synchronization primitives.
+
+Single-threaded programs execute instructions in a sequential manner, one after the other. In contrast, multithreaded programs can execute multiple threads concurrently, taking advantage of multiple CPU cores to improve performance and responsiveness.
+
+## Single Threading:
+Single threading refers to the execution of a program using only one thread. In simpler terms, the program runs one set of instructions at a time, and tasks are completed sequentially. If one task is ongoing, the program waits for it to finish before moving on to the next task.
+
+## Multi-Threading:
+Multi-threading involves the simultaneous execution of multiple threads within a program. Each thread can run its set of instructions independently, allowing for parallel processing. This means that different tasks can be performed concurrently, potentially improving the overall performance and responsiveness of the program.
+
