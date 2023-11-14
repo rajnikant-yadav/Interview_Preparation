@@ -1,4 +1,4 @@
-# Node.js <br>
+# Node.js
 Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!
 
 Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. This allows Node.js to be very performant.
@@ -13,7 +13,7 @@ Node.js has a unique advantage because millions of frontend developers that writ
 
 In Node.js the new ECMAScript standards can be used without problems, as you don't have to wait for all your users to update their browsers - you are in charge of deciding which ECMAScript version to use by changing the Node.js version, and you can also enable specific experimental features by running Node.js with flags.
 
-## Key features of Node.js include:<br>
+## Key features of Node.js include:
 #### JavaScript on the Server Side:
 Node.js enables the use of JavaScript on the server side, providing a unified language for both server-side and client-side development.<br>
 
@@ -87,8 +87,7 @@ When an asynchronous operation is initiated (like reading from a file or making 
 The event loop is a core concept in Node.js, and it's what allows Node.js to handle multiple operations concurrently. It's a loop that constantly checks if there are any tasks in the event queue that need attention. The event loop efficiently manages the execution of these tasks, ensuring that your program remains responsive to new events or requests.<br><br>
 
 ## How Node.js Work
-**When a user sends a request to a Node.js server, the following happens:**
-
+**When a user sends a request to a Node.js server, the following happens:**<br>
 The request is placed in a queue called the event queue.<br>
 The event loop is a single thread that monitors the event queue for new requests.<br>
 When a new request is detected, the event loop removes it from the queue and assigns it to a worker thread.<br>
@@ -100,7 +99,7 @@ This process is repeated continuously, allowing Node.js to handle multiple reque
 
 In the case of continuous requests, the event loop will simply continue to assign the requests to worker threads as they are received. This means that the server can continue to handle new requests even if there are already requests being processed.<br>
 
-**Here is a simplified explanation of how the internal mechanism of Node.js works when a user sends continuous requests:**
+**Here is a simplified explanation of how the internal mechanism of Node.js works when a user sends continuous requests:**<br>
 The user sends a request to the Node.js server.<br>
 The request is placed in the event queue.<br>
 The event loop detects the new request and assigns it to a worker thread.<br>
