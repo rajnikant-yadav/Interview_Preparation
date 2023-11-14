@@ -200,3 +200,83 @@ fetchData()
     console.error(error); // Output: Error fetching data!
   });
 ```
+## Promise.all
+Promise.all() is used to wait for multiple promises to complete before moving on to the next step. It takes an array of promises as input and returns a single promise. The returned promise will resolve with an array of results from the input promises, or it will reject with the first error that occurs in any of the input promises.
+
+### Use Case:
+When you have multiple asynchronous tasks (Promises) that you want to run concurrently, and you only care about the result when all of them are successfully completed.
+
+### Behavior:
+It waits for all the Promises to be fulfilled or for any one of them to be rejected. The resulting Promise is rejected if any of the input Promises is rejected.
+
+```javascript
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(10), 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(20), 2000);
+});
+
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(30), 3000);
+});
+
+Promise.all([promise1, promise2, promise3])
+  .then((results) => {
+    console.log("All promises resolved:", results);
+  })
+  .catch((error) => {
+    console.error("One or more promises rejected:", error);
+  });
+```
+## Promise.allSettled()
+Promise.allSettled() is similar to Promise.all(), but it waits for all promises to settle (either resolve or reject) before moving on. It takes an array of promises as input and returns a single promise. The returned promise will resolve with an array of objects, one for each input promise. Each object will have a status property (either "fulfilled" or "rejected") and a value property (the resolved value or the rejection reason).
+
+### Use Case:
+When you want to wait for all asynchronous tasks to complete (fulfilled or rejected) and get information about each task's outcome, regardless of success or failure.
+
+### Behavior:
+It waits for all the Promises to settle (either fulfill or reject). The resulting Promise is always fulfilled with an array of objects representing the outcome of each input Promise
+
+```javascript
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(10), 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => reject(new Error("Promise 2 rejected")), 2000);
+});
+
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(30), 3000);
+});
+
+Promise.allSettled([promise1, promise2, promise3])
+  .then((results) => {
+    console.log("All promises settled:", results);
+  });
+```
+
+## Difference between Promises and async/await 
+Promises and async/await are both ways of handling asynchronous operations in JavaScript. However, they have some key differences.
+
+### Promises
+Promises are objects that represent the eventual completion (or failure) of an asynchronous operation. They have three states: pending, fulfilled, and rejected. A pending promise represents an operation that has not yet completed. A fulfilled promise represents an operation that completed successfully, and a rejected promise represents an operation that failed.
+
+Promises are used by chaining together then() and catch() methods. The then() method is used to handle the fulfillment of a promise, and the catch() method is used to handle the rejection of a promise.
+
+### Async/Await
+Async/await is a newer syntax for handling asynchronous operations in JavaScript. It is built on top of promises, but it makes the code more readable and easier to write.
+
+Async/await is used by prefixing a function with the async keyword. This tells JavaScript that the function is asynchronous and that it may contain await expressions. An await expression pauses the execution of the function until the promise it is awaiting has been resolved.
+
+### Key Differences
+The key differences between promises and async/await are:
+
+Readability: Async/await is generally considered to be more readable than promises. This is because it makes the code look more like synchronous code.
+Error Handling: Async/await makes error handling easier. This is because you can use try/catch blocks with async/await functions.
+Nesting: Async/await functions can be nested. This makes it easier to write code that handles multiple asynchronous operations.
+
+### When to Use Each
+In general, async/await is the preferred way to handle asynchronous operations in JavaScript. However, there are some cases where promises may still be useful. For example, if you need to handle multiple asynchronous operations in a non-linear way, then promises may be a better choice.
