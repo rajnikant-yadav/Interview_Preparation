@@ -10,7 +10,7 @@ Here are two common strategies related to normalization in MongoDB:
 ### 1. Embedding Documents:
 Embedding involves nesting one document within another. This is suitable when the nested document is a natural part of the parent document and when the nested data doesn't change frequently.<br>
 
-```json
+```javascript
 Example:
 {
   "_id": 1,
@@ -26,7 +26,7 @@ Example:
 ### 2. Referencing Documents:
 Referencing involves storing a reference (typically the _id field) to another document instead of embedding it. This is suitable when the referenced document is large, changes frequently, or needs to be shared among multiple parent documents.<br>
 
-```json
+```javascript
 Example:
 // Parent Document
 {
