@@ -23,7 +23,7 @@ Node.js is built on an event-driven, non-blocking I/O model, making it well-suit
 #### Fast Execution:
 It uses the V8 JavaScript runtime engine, developed by Google, which compiles JavaScript code to native machine code, providing high performance.<br>
 
-### NPM (Node Package Manager):
+#### NPM (Node Package Manager):
 Node.js comes with npm, a package manager that allows developers to easily install and manage third-party libraries and packages for their projects.<br>
 
 #### Scalability:
@@ -115,3 +115,19 @@ The process repeats itself as long as the user continues to send requests.<br>
 Node.js is able to handle continuous requests efficiently because it uses a non-blocking I/O model. This means that the worker threads do not have to wait for I/O operations (such as reading from a file or writing to a database) to complete before they can continue processing the request.<br>
 
 As a result, Node.js servers can handle a large number of concurrent requests without blocking. This is one of the reasons why Node.js is well-suited for building real-time applications.
+
+## Protocol:
+A protocol is a set of rules that define how two or more entities can communicate with each other. Protocols can be used for a variety of purposes, including:
+
+**Communication:** Protocols define how data is formatted and transmitted between entities.<br>
+**Security:** Protocols can be used to ensure that data is transmitted securely and that only authorized entities can access it.<b>
+**Error handling:** Protocols define how errors are detected and handled.
+
+## IP Protocol
+The Internet Protocol (IP) is a network layer protocol that is responsible for routing data packets across a network. IP packets contain the source and destination addresses of the data, as well as other information that is needed to route the packet to its destination.
+
+## TCP
+The Transmission Control Protocol (TCP) is a transport layer protocol that is responsible for providing reliable data transmission between two endpoints. TCP uses a connection-oriented approach, which means that a connection must be established between the two endpoints before data can be transmitted. TCP also uses checksums and acknowledgments to ensure that data is transmitted reliably.
+
+## HTTP
+The Hypertext Transfer Protocol (HTTP) is an application layer protocol that is used for transferring hypermedia data, such as text, images, and video, between web servers and web browsers. HTTP is a stateless protocol, which means that each request from a client to a server is treated independently of any previous requests.
