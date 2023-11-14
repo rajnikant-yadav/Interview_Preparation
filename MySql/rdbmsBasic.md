@@ -33,7 +33,7 @@ Used in web development and data interchange.
 
 Choosing the right storage method depends on factors such as the nature of the data, the volume of data, performance requirements, and the specific needs of the application or system.
 
-**Before the rise of Database Management Systems (DBMS), data used to be stored in more straightforward ways directly on a computer's file system. Here are some common methods:** <br>
+**Before the rise of Database Management Systems (DBMS), data used to be stored in more straightforward ways directly on a computer's file system. Here are some common methods:** <br><br>
 Flat Files:
 Data stored in text files, often CSV or TSV.
 
