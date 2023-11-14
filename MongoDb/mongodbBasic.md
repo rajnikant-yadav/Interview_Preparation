@@ -44,7 +44,7 @@ A sharded collection is a MongoDB collection that is split across multiple shard
 #### Enable Sharding for a Database:
 To enable sharding for a database, you use the shardCollection command. This command tells MongoDB which collection to shard and on which key.<b>
 
-```mongodb
+```sql
 sh.shardCollection("mydb.mycollection", { shardKey: 1 });
 Determine Shard Key:
 ```
