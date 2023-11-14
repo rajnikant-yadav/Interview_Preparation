@@ -292,9 +292,9 @@ ACID properties are implemented in DBMS using a variety of techniques, such as l
 ## ER (Entity Relationship) Diagram in DBMS
 An Entity-Relationship (ER) diagram is a graphical representation of the entities and their relationships in a database. It is a way to visualize the structure of a database and how the different entities are related to each other.
 
-ER diagrams are used by database designers to plan and design databases. They are also used by developers to understand the structure of a database and to write code to interact with it.<b>
+ER diagrams are used by database designers to plan and design databases. They are also used by developers to understand the structure of a database and to write code to interact with it.<br>
 
-**Here are the three basic components of an ER diagram:**
+#### Here are the three basic components of an ER diagram
 
 **Entities:** Entities are the main objects in a database. They represent real-world objects, such as people, places, or things. Entities are represented by rectangles in an ER diagram. <br>
 
