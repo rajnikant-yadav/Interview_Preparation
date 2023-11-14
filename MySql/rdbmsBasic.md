@@ -70,11 +70,11 @@ Example: If you have a business and you want to store information about customer
 ### Why Database over File:
 Efficiency: Databases make it faster and easier to find, organize, and manage large amounts of connected data.
 Structured Relationships: Databases can establish relationships between different pieces of data, making it more powerful for certain types of applications.
-Security and Integrity: Databases provide better security features and ensure data integrity, preventing mistakes and unauthorized access.
+Security and Integrity: Databases provide better security features and ensure data integrity, preventing mistakes and unauthorized access.<br>
 
 ### When to Use File System:
 For simpler needs where data organization isn't complex.
-When the volume of data is relatively small.
+When the volume of data is relatively small.<br>
 
 ### When to Use Database:
 For complex data with many relationships.
@@ -85,7 +85,7 @@ Example:
 File System: You might use a file system to store personal photos, with folders for different events.
 Database: In a library, a database would be used to manage books, borrowers, and due dates, allowing easy tracking and retrieval of information.
 
-In summary, file systems are like basic digital filing cabinets, while databases are more like organized, intelligent systems tailored for handling interconnected and extensive data efficiently. We use databases when data becomes more complex and needs advanced organization and management.
+In summary, file systems are like basic digital filing cabinets, while databases are more like organized, intelligent systems tailored for handling interconnected and extensive data efficiently. We use databases when data becomes more complex and needs advanced organization and management.<br>
 
 
 ## DBMS
@@ -159,7 +159,7 @@ Three-tier architecture: large databases, applications with high traffic loads, 
 
 
 ## Types of Database Languages
-**There are four main types of database languages:**
+**There are four main types of database languages:**<br>
 **Data Definition Language (DDL):** DDL is used to define the structure of a database. This includes creating, altering, and deleting tables, columns, and other database objects. DDL is typically used by database administrators and application developers.
 ```sql
 -- Creating a new table
