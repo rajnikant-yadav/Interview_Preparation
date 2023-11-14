@@ -88,10 +88,10 @@ The event loop is a core concept in Node.js, and it's what allows Node.js to han
 ## How Node.js Work
 **When a user sends a request to a Node.js server, the following happens:**
 
-The request is placed in a queue called the event queue.
-The event loop is a single thread that monitors the event queue for new requests.
-When a new request is detected, the event loop removes it from the queue and assigns it to a worker thread.
-The worker thread processes the request and sends a response back to the event loop.
+The request is placed in a queue called the event queue.<br>
+The event loop is a single thread that monitors the event queue for new requests.<br>
+When a new request is detected, the event loop removes it from the queue and assigns it to a worker thread.<br>
+The worker thread processes the request and sends a response back to the event loop.<br>
 The event loop then places the response in a queue called the callback queue.
 The event loop then continues monitoring the event queue for new requests.
 When the event loop detects that there is a response in the callback queue, it sends it back to the client.
