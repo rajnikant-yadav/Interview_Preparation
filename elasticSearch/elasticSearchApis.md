@@ -327,10 +327,10 @@ These are some of the main Cluster APIs in Elasticsearch. They allow you to moni
 <br>
 
 ## Other APIs
-Snapshot: Creates a snapshot of an Elasticsearch index.
-Restore: Restores a snapshot of an Elasticsearch index.
-Reindex: Copies documents from one Elasticsearch index to another.
-Percolate: Checks if a document matches a search query, without returning the document itself.
+Snapshot: Creates a snapshot of an Elasticsearch index.<br>
+Restore: Restores a snapshot of an Elasticsearch index.<br>
+Reindex: Copies documents from one Elasticsearch index to another.<br>
+Percolate: Checks if a document matches a search query, without returning the document itself.<br>
 Scroll: Allows you to iterate over a large number of search results without having to load all of the results into memory at once.
-
+<br>
 These are just a few of the many APIs that are available in Elasticsearch. For more information, please see the Elasticsearch documentation: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs.html.
