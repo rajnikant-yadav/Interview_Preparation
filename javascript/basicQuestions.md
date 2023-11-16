@@ -280,3 +280,48 @@ Nesting: Async/await functions can be nested. This makes it easier to write code
 
 ### When to Use Each
 In general, async/await is the preferred way to handle asynchronous operations in JavaScript. However, there are some cases where promises may still be useful. For example, if you need to handle multiple asynchronous operations in a non-linear way, then promises may be a better choice.
+
+
+## Shallow Copy:
+A shallow copy creates a new object or array, but it only copies the references to the original nested objects or arrays, rather than creating copies of them. If the nested objects or arrays are modified, those changes will be reflected in both the original and the shallow copy.
+
+```javascript
+// Original object
+const originalObject = {
+  name: 'John',
+  age: 25,
+  hobbies: ['reading', 'coding']
+};
+
+// Shallow copy using Object.assign
+const shallowCopy = Object.assign({}, originalObject);
+
+// Modify the shallow copy
+shallowCopy.hobbies.push('gardening');
+
+console.log(originalObject.hobbies); // Output: ['reading', 'coding', 'gardening']
+
+// In the example above, the modification to shallowCopy.hobbies also affects originalObject.hobbies because they both reference the same array.
+```
+<br>
+
+## Deep Copy:
+A deep copy, on the other hand, creates entirely new copies of the original object and all of its nested objects or arrays. This ensures that changes to the nested objects or arrays do not affect the original.
+```javascript
+// Original object
+const originalObject = {
+  name: 'John',
+  age: 25,
+  hobbies: ['reading', 'coding']
+};
+
+// Deep copy using JSON.parse and JSON.stringify
+const deepCopy = JSON.parse(JSON.stringify(originalObject));
+
+// Modify the deep copy
+deepCopy.hobbies.push('gardening');
+
+console.log(originalObject.hobbies); // Output: ['reading', 'coding']
+
+// In this example, the modification to deepCopy.hobbies does not affect originalObject.hobbies because the deep copy created entirely new copies of the nested arrays.
+```
