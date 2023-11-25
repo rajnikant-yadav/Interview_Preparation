@@ -1,6 +1,16 @@
 # What is Docker 
 Docker is an open-platform application for developing, shipping, and running applications. Docker packages up software into standardized units called containers. Containers are a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings. Once you have a Docker container, you can run it on any computer with Docker installed. 
 
+## Docker Image
+A Docker image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and system tools. In other words, it's a snapshot or template of a file system that contains the application code and all its dependencies, allowing the application to run consistently across various environments.
+
+Docker images are used to create Docker containers, which are instances of running Docker images. The key advantages of using Docker images include.
+
+Docker images are typically created using a Dockerfile, which is a script-like configuration file that specifies the base image, application code, dependencies, and other settings. Images can be stored and shared through container registries, such as Docker Hub, allowing developers to easily distribute their applications and dependencies to others.
+
+## Docker Container
+Docker container is a lightweight, standalone, and executable unit that encapsulates an application along with its dependencies and runs in an isolated environment. Containers are created from Docker images, providing a consistent and portable way to package, deploy, and run applications across different environments. They offer benefits such as efficiency, scalability, and reproducibility by isolating the application from the underlying system and other containers.
+
 ## Installing Docker on Amazon EC2 Ubuntu Instance
 
 To install Docker on an Amazon EC2 Ubuntu instance, follow these steps:
@@ -40,7 +50,6 @@ sudo usermod -aG docker $USER
 ```
 #### Step 7: Log out and log back in
 Log out and log back in to refresh your user's permissions and ensure you can run Docker commands without using sudo.
-
 
 
 
