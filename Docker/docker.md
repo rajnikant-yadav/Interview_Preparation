@@ -1,0 +1,2 @@
+# What is Docker 
+Docker is an open-platform application for developing, shipping, and running applications. Docker packages up software into standardized units called containers. Containers are a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings. Once you have a Docker container, you can run it on any computer with Docker installed. 
