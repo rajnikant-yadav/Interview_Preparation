@@ -22,8 +22,6 @@ SELECT DATABASE();
 SHOW TABLES;
 ```
 
-<br>
-
 #### Create a new table in the database
 ```sql
 CREATE TABLE my_table (
@@ -33,19 +31,16 @@ CREATE TABLE my_table (
   PRIMARY KEY (id)
 );
 ```
-<br>
 
 #### Insert a new row into the table
 ```sql
 INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
 ```
-<br>
 
 #### Show data from the table
 ```sql
 SELECT * FROM my_table;
 ```
-<br>
 
 #### Update a row in the table
 ```sql
@@ -56,26 +51,22 @@ UPDATE my_table SET name = 'Jane Doe' WHERE id = 1;
 ```sql
 DELETE FROM my_table WHERE id = 2;
 ```
-<br>
 
 #### Query the table for all rows where the name is equal to 'John Doe'
 ```sql
 SELECT * FROM my_table WHERE name = 'John Doe';
 ```
-<br>
 
 #### Create a view that shows the name and email address of all customers who have placed an order in the last month
 ```sql
 CREATE VIEW recent_customers AS
 SELECT name, email FROM customers WHERE order_date >= CURRENT_DATE - INTERVAL 1 MONTH;
 ```
-<br>
 
 #### Grant permission to a user to select data from the recent_customers view
 ```sql
 GRANT SELECT ON recent_customers TO user1;
 ```
-<br>
 
 ## SQL is divided into five subsets:
 **Data Definition Language (DDL):** DDL is used to create, alter, and drop database objects, such as databases, tables, and views.<br>
