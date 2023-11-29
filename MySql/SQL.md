@@ -43,7 +43,7 @@ INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
 
 #### Show data from the table
 ```sql
-INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
+SELECT * FROM my_table;
 ```
 <br>
 
