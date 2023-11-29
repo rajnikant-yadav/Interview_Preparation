@@ -5,6 +5,23 @@ SQL, or Structured Query Language, is a programming language used for managing a
 ```sql
 CREATE DATABASE YourDatabaseName;
 ```
+#### To list all databases, use the following query:
+```sql
+SHOW DATABASES;
+```
+#### To switch or select a database, use the following query:
+```sql
+USE DATABASENAME;
+```
+#### To check current database name use the following query:
+```sql
+SELECT DATABASE();
+```
+#### To list all tables in a database, use the following query:
+```sql
+SHOW TABLES;
+```
+
 <br>
 
 #### Create a new table in the database
@@ -19,6 +36,12 @@ CREATE TABLE my_table (
 <br>
 
 #### Insert a new row into the table
+```sql
+INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
+```
+<br>
+
+#### Show data from the table
 ```sql
 INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
 ```
