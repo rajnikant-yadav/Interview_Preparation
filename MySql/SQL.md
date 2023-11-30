@@ -48,6 +48,9 @@ INSERT INTO my_table (name, email) VALUES ('John Doe', 'john.doe@example.com');
 ## Show data from the table
 ```sql
 SELECT * FROM my_table;
+
+SELECT columnName FROM my_table;
+SELECT name FROM my_table
 ```
 
 ## Update a row in the table
