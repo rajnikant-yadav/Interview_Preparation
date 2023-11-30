@@ -31,6 +31,14 @@ CREATE TABLE my_table (
   PRIMARY KEY (id)
 );
 ```
+## To check the schema of a table in MySQL, you can use the DESCRIBE statement or the SHOW COLUMNS statement.
+```bash
+DESCRIBE your_table_name;
+
+OR
+SHOW COLUMNS FROM your_table_name;
+
+```
 
 ## Insert a new row into the table
 ```sql
