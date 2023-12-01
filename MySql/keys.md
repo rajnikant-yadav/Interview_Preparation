@@ -48,7 +48,6 @@ SELECT books.book_id, books.title, authors.author_name
 FROM books
 JOIN authors ON books.author_id = authors.author_id;
 
-```
 The result would be:
 +-----------+-----------------------------+-------------+
 | author_id | author_name                 |             |
@@ -66,7 +65,7 @@ The result would be:
 | 103     | Pride and Prejudice                     | Jane Austen    |
 +---------+-----------------------------------------+----------------+
 
-<br>
+```
 
 #### Unique Key:
 Similar to a primary key, a unique key ensures that the values in a column or a group of columns are unique across the table. However, unlike the primary key, a table can have multiple unique keys.<br>
