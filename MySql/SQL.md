@@ -201,3 +201,67 @@ ROLLBACK;
 -- In this example, if there's an issue during the transaction (e.g., an error occurs), the ROLLBACK statement is used to undo any changes made during that transaction.
 ```
 
+
+## INNER JOIN 
+In MySQL, an INNER JOIN is used to combine rows from two or more tables based on a related column between them. The result set includes only the rows where there is a match between the specified columns in the joined tables. Here's the basic syntax for an INNER JOIN:
+```sql
+Syntax
+SELECT column_name(s)
+FROM TableA
+INNER JOIN TableB
+ON TableA.col_name = TableB.col_name
+
+create table students(student_id INT NOT NULL PRIMARY KEY, student_name VARCHAR(255) NOT NULL);
+INSERT INTO students (student_id, student_name) VALUES     (1, 'Alice'),     (2, 'Bob'),     (3, 'Charlie');
+
+create table course(course_id  INT NOT NULL PRIMARY KEY, course_name VARCHAR(255) NOT NULL);
+INSERT INTO course (course_id, course_name) VALUES     (101, 'Math'),     (102, 'English'),     (103, 'Science');
+
+mysql> SELECT *FROM students;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|          1 | Alice        |
+|          2 | Bob          |
+|          3 | Charlie      |
++------------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT *FROM courses;
++-----------+-------------+
+| course_id | course_name |
++-----------+-------------+
+|       101 | Math        |
+|       102 | English     |
+|       103 | Science     |
++-----------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM students AS s INNER JOIN courses AS c ON s.student_id = c.course_id;
+Empty set (0.00 sec)
+
+mysql> UPDATE students SET student_id = 101 WHERE student_id = 1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM students;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|          2 | Bob          |
+|          3 | Charlie      |
+|        101 | Alice        |
++------------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM students AS s INNER JOIN courses AS c ON s.student_id = c.course_id;
++------------+--------------+-----------+-------------+
+| student_id | student_name | course_id | course_name |
++------------+--------------+-----------+-------------+
+|        101 | Alice        |       101 | Math        |
++------------+--------------+-----------+-------------+
+1 row in set (0.00 sec)
+
+```
+
+
