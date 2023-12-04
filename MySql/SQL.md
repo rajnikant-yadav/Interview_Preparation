@@ -284,4 +284,24 @@ mysql> SELECT * FROM students AS s
 3 rows in set (0.01 sec)
 
 ```
+## RIGHT JOIN 
+In MySQL, a RIGHT JOIN is used to retrieve all records from the right table (TableB) and the matched records from the left table (TableA). If there is no match, NULL values are returned for columns from the left table. Here's the basic syntax for a RIGHT JOIN:
+```sql
+Syntax
+SELECT column_name(s)
+FROM TableA
+LEFT JOIN TableB
+ON TableA.col_name = TableB.col_name;
+
+mysql> SELECT * FROM students AS s RIGHT JOIN courses AS c ON s.student_id = c.course_id;
++------------+--------------+-----------+-------------+
+| student_id | student_name | course_id | course_name |
++------------+--------------+-----------+-------------+
+|        101 | Alice        |       101 | Math        |
+|       NULL | NULL         |       102 | English     |
+|       NULL | NULL         |       103 | Science     |
++------------+--------------+-----------+-------------+
+3 rows in set (0.00 sec)
+
+```
 
