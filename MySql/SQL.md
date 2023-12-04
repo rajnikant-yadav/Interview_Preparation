@@ -304,4 +304,40 @@ mysql> SELECT * FROM students AS s RIGHT JOIN courses AS c ON s.student_id = c.c
 3 rows in set (0.00 sec)
 
 ```
+## FULL OUTER JOIN
+In MySQL, a FULL OUTER JOIN retrieves all records from both tables (TableA and TableB). If there is no match, NULL values are returned for columns from the table where there is no match. Here's the basic syntax for a FULL OUTER JOIN:
+```sql
+Syntax
+SELECT column_name(s)
+FROM TableA
+LEFT JOIN TableB
+ON TableA.col_name = TableB.col_name;
+-- Performing a FULL OUTER JOIN
+
+-- Simulating FULL OUTER JOIN
+mysql> SELECT * FROM students AS s FULL OUTER JOIN courses AS c ON s.student_id = c.course_id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FULL OUTER JOIN courses AS c ON s.student_id = c.course_id' at line 1
+
+MySQL doesn't directly support the FULL OUTER JOIN syntax.
+
+To simulate a FULL OUTER JOIN in MySQL, you can use a combination of LEFT JOIN and RIGHT JOIN with the UNION operator. Here's the corrected example:
+
+mysql> SELECT * FROM students AS s
+    -> LEFT JOIN courses AS c ON s.student_id = c.course_id
+    -> UNION
+    -> SELECT * FROM students AS s
+    -> RIGHT JOIN courses AS c ON s.student_id = c.course_id;
++------------+--------------+-----------+-------------+
+| student_id | student_name | course_id | course_name |
++------------+--------------+-----------+-------------+
+|          2 | Bob          |      NULL | NULL        |
+|          3 | Charlie      |      NULL | NULL        |
+|        101 | Alice        |       101 | Math        |
+|       NULL | NULL         |       102 | English     |
+|       NULL | NULL         |       103 | Science     |
++------------+--------------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+
+```
 
