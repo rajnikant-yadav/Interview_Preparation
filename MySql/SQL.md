@@ -263,5 +263,25 @@ mysql> SELECT * FROM students AS s INNER JOIN courses AS c ON s.student_id = c.c
 1 row in set (0.00 sec)
 
 ```
+## LEFT JOIN 
+In MySQL, a LEFT JOIN is used to retrieve all records from the left table (TableA) and the matched records from the right table (TableB). If there is no match, NULL values are returned for columns from the right table. Here's the basic syntax for a LEFT JOIN:
+```sql
+Syntax
+SELECT column_name(s)
+FROM TableA
+LEFT JOIN TableB
+ON TableA.col_name = TableB.col_name;
 
+mysql> SELECT * FROM students AS s
+    -> LEFT JOIN courses AS c ON s.student_id = c.course_id;
++------------+--------------+-----------+-------------+
+| student_id | student_name | course_id | course_name |
++------------+--------------+-----------+-------------+
+|          2 | Bob          |      NULL | NULL        |
+|          3 | Charlie      |      NULL | NULL        |
+|        101 | Alice        |       101 | Math        |
++------------+--------------+-----------+-------------+
+3 rows in set (0.01 sec)
+
+```
 
