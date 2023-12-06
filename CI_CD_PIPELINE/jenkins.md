@@ -26,3 +26,21 @@ Jenkins has a user-friendly web interface that makes it easy to configure and ma
 Being open source, Jenkins has a large and active community. Users can find support, documentation, and a wide range of plugins contributed by the community.
 
 Jenkins is widely adopted in DevOps practices, where automation, collaboration, and rapid feedback are essential. It plays a crucial role in helping development teams deliver high-quality software more efficiently
+
+## Docker pull
+The docker pull command is used to download a Docker image from a container registry. In this case, you are pulling the Jenkins image from Docker Hub.
+
+Here's the command to pull the Jenkins image:
+```bash
+docker pull jenkins/jenkins
+
+This command downloads the latest version of the Jenkins image from Docker Hub. If you want to pull a specific version, you can specify the version tag. For example, to pull Jenkins version 2.277.2, you would use:
+
+
+docker pull jenkins/jenkins:2.277.2
+
+Once the image is pulled, you can use it to run a Jenkins container. For example:
+
+docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:2.277.2
+
+```

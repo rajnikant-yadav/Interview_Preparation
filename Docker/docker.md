@@ -60,7 +60,6 @@ Verify Login:
 After successfully logging in, you should see a message indicating that you are logged in.
 ```
 
-
 ### Run the Docker Container in the Background:
 ```bash
 docker run -p 3000:3000 -d 4f8fd11e6106
@@ -78,7 +77,18 @@ docker stop $(docker ps -q)   # Stop all running containers
 docker rm $(docker ps -a -q) # Remove all containers
 ```
 
+### To list the Docker images on your system, you can use the following command:
+```bash
+docker images
+This command will display a list of all Docker images currently available on your system. The output includes information such as the repository, tag, image ID, creation date, and size.
 
+Here's an example of what the output might look like
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              775349758637        2 weeks ago         72.9MB
+nginx               latest              e61a8b9e3551        3 weeks ago         132MB
+...
+```
 
 ## Installing Docker on Windows
 
