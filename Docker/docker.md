@@ -51,17 +51,34 @@ sudo usermod -aG docker $USER
 #### Step 7: Log out and log back in
 Log out and log back in to refresh your user's permissions and ensure you can run Docker commands without using sudo.
 
+## Login to Docker Hub:
+Use the following command to log in to Docker Hub. Replace <username> and <password> with your Docker Hub username and password.
+```bash
+docker login -u <username> -p <password>
+
+Verify Login:
+After successfully logging in, you should see a message indicating that you are logged in.
+```
 
 
-## Run the Docker Container in the Background:
+### Run the Docker Container in the Background:
 ```bash
 docker run -p 3000:3000 -d 4f8fd11e6106
 ```
-## Check for Existing Processes on Port 3000:
+### Check for Existing Processes on Port 3000:
 You can use the following command to check if another process is already using port 3000:
 ```bash
 sudo lsof -i :3000
 ```
+
+### Stop and Remove Existing Containers:
+If the previous Docker container is still running or there are stopped containers using the same port, you might want to stop and remove them before starting a new container:
+```bash
+docker stop $(docker ps -q)   # Stop all running containers
+docker rm $(docker ps -a -q) # Remove all containers
+```
+
+
 
 ## Installing Docker on Windows
 
