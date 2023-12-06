@@ -53,6 +53,16 @@ Log out and log back in to refresh your user's permissions and ensure you can ru
 
 
 
+## Run the Docker Container in the Background:
+```bash
+docker run -p 3000:3000 -d 4f8fd11e6106
+```
+## Check for Existing Processes on Port 3000:
+You can use the following command to check if another process is already using port 3000:
+```bash
+sudo lsof -i :3000
+```
+
 ## Installing Docker on Windows
 
 To install Docker on your Windows machine, follow these steps:
